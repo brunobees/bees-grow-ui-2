@@ -1,0 +1,34 @@
+{
+  "name": "@bees-grow-ui/react",
+  "version": "1.2.0",
+  "description": "",
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react --outDir build",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react --outDir build",
+    "lint": "eslint src/**/*.{ts,tsx} --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@bees-grow-ui/eslint-config": "*",
+    "@bees-grow-ui/tokens": "*",
+    "@bees-grow-ui/ts-config": "*",
+    "@types/react": "^18.0.32",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.2",
+    "@radix-ui/react-checkbox": "^1.0.3",
+    "@radix-ui/react-toast": "^1.1.3",
+    "@radix-ui/react-tooltip": "^1.0.5",
+    "@stitches/react": "^1.2.8",
+    "phosphor-react": "^1.4.1"
+  }
+}

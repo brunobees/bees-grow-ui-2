@@ -1,0 +1,42 @@
+{
+  "name": "@bees-grow-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "storybook dev -p 6006",
+    "deploy-storybook": "storybook-to-ghpages",
+    "build": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^8.0.6",
+    "@storybook/addon-essentials": "^8.0.6",
+    "@storybook/addon-interactions": "^8.0.6",
+    "@storybook/addon-links": "^8.0.6",
+    "@storybook/addon-mdx-gfm": "^8.0.6",
+    "@storybook/react": "^8.0.6",
+    "@storybook/react-vite": "^8.0.6",
+    "@storybook/storybook-deployer": "^2.8.16",
+    "@vitejs/plugin-react": "^2.1.0",
+    "babel-loader": "^8.2.5",
+    "storybook": "^8.0.6",
+    "vite": "^5.2.8"
+  },
+  "dependencies": {
+    "@bees-grow-ui/eslint-config": "*",
+    "@bees-grow-ui/react": "*",
+    "@bees-grow-ui/tokens": "*",
+    "@bees-grow-ui/ts-config": "*",
+    "@storybook/addon-a11y": "^8.0.6",
+    "@storybook/test": "^8.0.6",
+    "phosphor-react": "^1.4.1",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

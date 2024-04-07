@@ -1,0 +1,4 @@
+{
+  "extends": "@bees-grow-ui/ts-config/react.json",
+  "include": ["src"]
+}
