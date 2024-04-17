@@ -30,7 +30,6 @@
   "dependencies": {
     "@bees-grow-ui/eslint-config": "*",
     "@bees-grow-ui/react": "*",
-    "@bees-grow-ui/tokens": "*",
     "@bees-grow-ui/ts-config": "*",
     "@storybook/addon-a11y": "^8.0.6",
     "@storybook/test": "^8.0.6",

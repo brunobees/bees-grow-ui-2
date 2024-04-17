@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/blocks'
 import { TokensGrid } from '../../components/TokensGrid'
-import { fontWeights } from '@bees-grow-ui/tokens'
+import { tokens } from '@bees-grow-ui/react'
 
 <Meta title="Tokens/Font Weights" />
 
 # Font Weights
 
-<TokensGrid tokens={fontWeights} />
+<TokensGrid tokens={tokens.fonts["font-weight"]} keyPrefix={'fonts["font-weight"]'} />

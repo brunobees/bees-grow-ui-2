@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/blocks'
 import { TokensGrid } from '../../components/TokensGrid'
-import { fontSizes } from '@bees-grow-ui/tokens'
+import { tokens } from '@bees-grow-ui/react'
 
 <Meta title="Tokens/Font Sizes" />
 
 # Font Sizes
 
-<TokensGrid tokens={fontSizes} hasRemValue />
+<TokensGrid tokens={tokens.measure["font-size"]} keyPrefix={'measure["font-size"]'}/>

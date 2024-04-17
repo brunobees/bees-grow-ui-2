@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/blocks'
 import { TokensGrid } from '../../components/TokensGrid'
-import { radii } from '@bees-grow-ui/tokens'
+import { tokens } from '@bees-grow-ui/react'
 
 <Meta title="Tokens/Radii" />
 
 # Radii
 
-<TokensGrid tokens={radii} />
+<TokensGrid tokens={tokens.measure["border-radius"]} keyPrefix={'measure["border-radius"]'} />

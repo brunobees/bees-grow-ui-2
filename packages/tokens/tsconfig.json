@@ -1,6 +1,0 @@
-{
-  "extends": "@bees-grow-ui/ts-config/base.json",
-  "include": [
-    "src"
-  ],
-}

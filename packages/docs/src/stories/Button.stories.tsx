@@ -1,15 +1,17 @@
+import React from "react";
+
 import { Button, ButtonProps } from "@bees-grow-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArrowRight } from "phosphor-react";
 
 export default {
   title: "Form/Button",
   component: Button,
   args: {
-    children: "Send",
+    title: "Add to truck",
     variant: "primary",
     size: "md",
     disabled: false,
+    onClick: () => alert("Button clicked"),
   },
   argTypes: {
     variant: {
@@ -40,31 +42,18 @@ export const Primary: StoryObj<ButtonProps> = {};
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
     variant: "secondary",
-    children: "Create new",
   },
 };
 
 export const Tertiary: StoryObj<ButtonProps> = {
   args: {
     variant: "tertiary",
-    children: "Cancel",
   },
 };
 
 export const Small: StoryObj<ButtonProps> = {
   args: {
     size: "sm",
-  },
-};
-
-export const WithIcon: StoryObj<ButtonProps> = {
-  args: {
-    children: (
-      <>
-        Próximo passo
-        <ArrowRight weight="bold" />
-      </>
-    ),
   },
 };
 

@@ -2,40 +2,83 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  overrides: [],
+  extends: [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:sort-export-all/recommended",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "import-helpers"],
+  plugins: [
+    "react",
+    "jsx-a11y",
+    "@typescript-eslint",
+    "import-helpers",
+    "import",
+  ],
   rules: {
-    indent: ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
-    semi: ["error", "always"],
-    "import-helpers/order-imports": [
+    "import/newline-after-import": ["warn"],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "multiline-const", "next": "export"}
+    ],
+    "prettier/prettier": [
       "error",
       {
+        printWidth: 80,
+        tabWidth: 2,
+        doubleQuote: true,
+        trailingComma: "all",
+        arrowParens: "always",
+        endOfLine: "auto",
+      },
+    ],
+    "react/prop-types": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_",
+      },
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
         newlinesBetween: "always",
-        groups: [
-          "/^react/",
-          "module",
-          "/^@shared/",
-          "/css/",
-          "/style/",
-          "/assets/",
-          "/^~/",
-          "/components/",
-          ["parent", "sibling", "index"],
-        ],
+        groups: ["/^react/", "module", "/^@//", ["parent", "sibling", "index"]],
         alphabetize: {
           order: "asc",
           ignoreCase: true,
         },
       },
     ],
+    "sort-imports": [
+      "error",
+      {
+        ignoreCase: true,
+        ignoreDeclarationSort: true,
+      },
+    ],
   },
+  settings: {
+    react: {
+      version: "detect",
+    },
+    "import/parsers": {
+      [require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],
+    },
+  },
+  ignorePatterns: ["node_modules"],
 };
