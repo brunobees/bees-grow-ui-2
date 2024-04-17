@@ -15,7 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "@bees-grow-ui/eslint-config": "*",
-    "@bees-grow-ui/tokens": "*",
     "@bees-grow-ui/ts-config": "*",
     "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
